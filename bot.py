@@ -205,7 +205,7 @@ def mesaj_olustur(df, sembol, interval):
         f"〽️ {sembol} | {yon_txt}",
         f"<b>Fiyat:</b> {fiyat:.6f}",
         f"{interval} | {zaman} (UTC)",
-        "☁️ <i>GitHub Actions</i>",
+        "☁️ <i>GITHUB MESAJI</i>",
     ]
 
     if bool(son["alis_sinyal"]):
