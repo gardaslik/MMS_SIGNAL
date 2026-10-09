@@ -26,6 +26,12 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Telegram test
+        run: |
+          curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="✅ Test mesajı"
+
       - run: python bot.py
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
